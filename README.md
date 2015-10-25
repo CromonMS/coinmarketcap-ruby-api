@@ -64,7 +64,8 @@ For instance @coin.price
 Added a couple of methods that currently work in Terminal.
 
 ```ruby
-@all_coins = Coinmarketcap::Coins.list(optional = integer)
+@all_coins = Coinmarketcap::Coins.list
+@all_coins = Coinmarketcap::Coins.list(10) # Only grabs the 10 newest currencies
 => Returns a list of available currencies, currently ordered default, most recent coins first.
 => If you pass an integer to the method it returns only that many records, currently defaults to all.
 
