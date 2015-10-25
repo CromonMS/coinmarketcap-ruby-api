@@ -64,8 +64,9 @@ For instance @coin.price
 Added a couple of methods that currently work in Terminal.
 
 ```ruby
-@all_coins = Coinmarketcap::Coins.list
+@all_coins = Coinmarketcap::Coins.list(optional = integer)
 => Returns a list of available currencies, currently ordered default, most recent coins first.
+=> If you pass an integer to the method it returns only that many records, currently defaults to all.
 
 @market_count = Coinmarketcap::Coins.market_count
 => Returns number of available markets.
@@ -86,3 +87,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Cromon
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Donations
+
+BTC: 15mUcgU8Qzk22dU9ueP7S2MifGFDUxYsxD
+VRC: VLfBtATeKhyRxxvVVDUTUR75BnN8JrYjTy

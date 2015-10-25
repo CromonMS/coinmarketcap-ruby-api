@@ -12,16 +12,11 @@ module Coinmarketcap
 		end
 
 		# Coinmarketcap::Coins.list
-		def self.list
+		# accepts an integer in case you don't want all records
+		def self.list(count = self.market_count - 0)
 			response = Faraday.get(BASE_URI + 'all.json')
 			coins = JSON.parse(response.body)
-			all_coin_list = coins["markets"]
-
-			# This small bit of code, prints out all available pairs to terminal when run in IRB
-			all_coin_list.map do |coin|
-				puts "#{coin["name"]}, #{coin["symbol"]}"
-			end
-			new
+			all_coin_list = coins["markets"].first(count)
 		end	
 	end
 end
