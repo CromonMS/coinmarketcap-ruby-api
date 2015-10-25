@@ -3,6 +3,7 @@
 ### Currently a WIP.
 
 Simple API wrapper for Coinmarketcap using *http://coinmarketcap.northpole.ro/*
+They update their JSON feed every 5 minutes.
 
 ## Installation
 
@@ -68,6 +69,8 @@ Added a couple of methods that currently work in Terminal.
 
 @market_count = Coinmarketcap::Coins.market_count
 => Returns number of available markets.
+```
+
 
 ## Development
 
@@ -77,8 +80,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coinmarketcap.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/CromonMS/coinmarketcap.
 
 ## License
 
