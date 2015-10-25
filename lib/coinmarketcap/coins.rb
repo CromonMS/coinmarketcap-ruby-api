@@ -4,6 +4,12 @@ require 'json'
 module Coinmarketcap
 	class Coins
 
+		attr_reader :count
+
+		def initialize(coins)
+			@count = coins["markets"].count # @coins = Coinmarketcap::Coins.list(10) | @coins.count
+		end
+
 		# Coinmarketcap::Coins.market_count
 		def self.market_count
 			response = Faraday.get(BASE_URI + 'all.json')
@@ -16,7 +22,7 @@ module Coinmarketcap
 		def self.list(count = self.market_count - 0)
 			response = Faraday.get(BASE_URI + 'all.json')
 			coins = JSON.parse(response.body)
-			all_coin_list = coins["markets"].first(count)
+			all_coin_list = coins["markets"]
 		end	
 	end
 end

@@ -7,7 +7,7 @@ class CoinmarketcapCoinTest < Minitest::Test
 
 	def test_it_returns_market_count
 		VCR.use_cassette('all_coins') do
-			all_coins = Coinmarketcap::Coin.market_count
+			all_coins = Coinmarketcap::Coins.market_count
 			assert_equal Fixnum, all_coins.class
 			assert_operator all_coins, :>, 1
 		end
@@ -15,7 +15,7 @@ class CoinmarketcapCoinTest < Minitest::Test
 
 	def test_it_returns_a_list_of_all_coins
 		VCR.use_cassette('all_coins') do
-			response = Coinmarketcap::Coin.list
+			response = Coinmarketcap::Coins.list
 
 			assert response.kind_of?(Array)
 		end
