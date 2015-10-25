@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://coinmarketcap.northpole.ro/api/v5/BTC.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 09:28:27 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      Last-Modified:
+      - Sun, 25 Oct 2015 09:25:03 GMT
+      Etag:
+      - '"1a42a6-4e3-522ea6b714ca2"'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '1251'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"position":"1","name":"Bitcoin","symbol":"BTC","category":"currency","marketCap":{"usd":"4254928218.2","btc":"14761550.0","eur":"3861832419.8333745","cny":"27015517890.841988","gbp":"2778570244.761837","cad":"5602123590.646483","rub":"264793586409.9482","hkd":"32975540513.634144","jpy":"516818048138.51385","aud":"5894177608.615514"},"price":{"usd":"288.244","btc":"1.0","eur":"261.614289816","cny":"1830.1274521200003","gbp":"188.23024985600003","cad":"379.50781528","rub":"17938.061139240002","hkd":"2233.880623216","jpy":"35011.0962696","aud":"399.29259519600004"},"availableSupply":"14,761,550","availableSupplyNumber":14761550,"volume24":{"usd":"0.0
+        %","btc":"113626.0","eur":"0.0 %","cny":"0.0 %","gbp":"0.0 %","cad":"0.0 %","rub":"0.0
+        %","hkd":"0.0 %","jpy":"0.0 %","aud":"0.0 %"},"change1h":{"usd":"-0.20","btc":"0.00","eur":"-0.20","cny":"-0.20","gbp":"-0.20","cad":"-0.20","rub":"-0.20","hkd":"-0.20","jpy":"-0.20","aud":"-0.20"},"change7h":{"usd":"3.47","btc":"0.00","eur":"3.47","cny":"3.47","gbp":"3.47","cad":"3.47","rub":"3.47","hkd":"3.47","jpy":"3.47","aud":"3.47"},"change7d":{"usd":"7.34","btc":"0.00","eur":"7.34","cny":"7.34","gbp":"7.34","cad":"7.34","rub":"7.34","hkd":"7.34","jpy":"7.34","aud":"7.34"},"timestamp":1445765102}'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 09:28:27 GMT
+recorded_with: VCR 2.9.3
