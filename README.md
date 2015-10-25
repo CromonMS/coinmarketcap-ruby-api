@@ -91,4 +91,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 ## Donations
 
 BTC: 15mUcgU8Qzk22dU9ueP7S2MifGFDUxYsxD
+
 VRC: VLfBtATeKhyRxxvVVDUTUR75BnN8JrYjTy
