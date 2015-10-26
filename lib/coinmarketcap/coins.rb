@@ -27,5 +27,13 @@ module Coinmarketcap
 			attributes = JSON.parse(response.body)			
 			attributes["markets"].count
 		end
+		
+		# Coinmarketcap::Coins.list
+		# accepts an integer in case you don't want all records
+		def self.list(count = self.market_count - 0)
+			response = Faraday.get(BASE_URI + 'all.json')
+			coins = JSON.parse(response.body)
+			all_coin_list = coins["markets"]
+		end			
 	end
 end

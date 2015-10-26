@@ -5,21 +5,19 @@
 Simple API wrapper for Coinmarketcap using *http://coinmarketcap.northpole.ro/*
 They update their JSON feed every 5 minutes.
 
+TODO: Need a more refined look at how this is to work!
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile, you will have to clone it from Github and source it locally for now:
 
 ```ruby
-gem 'coinmarketcap'
+gem 'coinmarketcap', :path => "/Path/to/coinmarketcap/"
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install coinmarketcap
+    $ bundle install
 
 ## Usage
 
@@ -64,7 +62,7 @@ For instance @coin.price
 Added a couple of methods that currently work in Terminal.
 
 ```ruby
-@all_coins = Coinmarketcap::Coins.list
+@all_coins = Coinmarketcap::Coins.all
 @all_coins = Coinmarketcap::Coins.list(10) # Only grabs the 10 newest currencies
 => Returns a list of available currencies, currently ordered default, most recent coins first.
 => If you pass an integer to the method it returns only that many records, currently defaults to all.
@@ -72,6 +70,8 @@ Added a couple of methods that currently work in Terminal.
 @market_count = Coinmarketcap::Coins.market_count
 => Returns number of available markets.
 ```
+
+TODO: Sort this section out a bit more, and work out the best name for the 'all' method, 'list' might be ambiguous too, as it doesn't really list much right now...
 
 
 ## Development
